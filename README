@@ -7,4 +7,4 @@
                                    _/ |    
                                   |__/     
 
-Search.js is a fork of [VisualSearch.js](https://github.com/documentcloud/visualsearch "VisualSearch.js"), which enhances ordinary search boxes with the ability to autocomplete faceted search queries. In this fork, VisualSearch has been rewritten to become lighter with support for dynamic operators, HTML5 input types(numbers and dates), and JSON output for flexible data interchange.
+Search.js is a fork of VisualSearch.js (https://github.com/documentcloud/visualsearch), which enhances ordinary search boxes with the ability to autocomplete faceted search queries. In this fork, VisualSearch has been rewritten to become lighter with support for dynamic operators, HTML5 input types(numbers and dates), and JSON output for flexible data interchange.
