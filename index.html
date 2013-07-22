@@ -45,6 +45,9 @@
 		font-style: italic;
 		margin-left: 20px;
 	}
+	div#search_query{
+		font-size: 11px;
+	}
 
 </style>
 
@@ -82,6 +85,10 @@
 	</p>
 
 	<div id="search_box_container"></div>
+
+	<p>
+		JSON Data:
+	</p>
 	<div id="search_query">&nbsp;</div>
 
 	<script type="text/javascript" charset="utf-8">
@@ -91,7 +98,7 @@
 				placeholder: "hi",
 				strict: false,
 				search: function(json){
-					console.log(json);
+					$("div#search_query").html(json);
 				},
 				parameters: [
 					{
