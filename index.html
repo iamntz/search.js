@@ -64,7 +64,7 @@
 <script src="vendor/underscore-1.4.3.js" type="text/javascript" charset="utf-8"></script>
 <script src="vendor/backbone.js" type="text/javascript" charset="utf-8"></script>
 
-<script src="lib/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/js/search.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 
@@ -91,14 +91,14 @@
 		$(function(){
 			window.visualSearch = new VisualSearch({
 				el		: $('#search_box_container'),
-				placeholder: "hi",
-				strict: false,
+				placeholder: "Customizable Placeholder!",
+				strict: true,
 				search: function(json){
 					$("div#search_query").html(json);
 				},
 				parameters: [
 					{
-						parameter: "City",
+						key: "City",
 						category: "Location",
 						placeholder: "",
 						operators: [
@@ -123,7 +123,7 @@
 						]
 					},
 					{
-						parameter: "U.S. State",
+						key: "U.S. State",
 						category: "Location",
 						placeholder: "",
 						values: [
@@ -141,19 +141,19 @@
 						]
 					},
 					{
-						parameter: "Filter",
+						key: "Filter",
 						placeholder: "Status",
 						values: ['published', 'unpublished', 'draft']
 					},
 					{
-						parameter: "Number",
+						key: "Number",
 						placeholder: "Between 1 and 10",
 						type: "number",
 						min: 1,
 						max: 10
 					},
 					{
-						parameter: "Date",
+						key: "Date",
 						placeholder: "Any",
 						type: "date",
 						min: 1,
@@ -162,7 +162,17 @@
 				],
 				defaultquery	: [
 					{
-						parameter: "Date",
+						key: "Date",
+						operator: "==",
+						value: "1993-03-02"
+					},
+					{
+						key: "Date",
+						operator: "==",
+						value: "1993-03-02"
+					},
+					{
+						key: "Date",
 						operator: "==",
 						value: "1993-03-02"
 					},

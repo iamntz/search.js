@@ -67,11 +67,8 @@
 }
 .VS-search .VS-search-inner {
 	position: relative;
-	margin: 4px 20px;
+	margin: 3px 20px;
 	overflow: hidden;
-}
-.VS-search input {
-	width: 80px;
 }
 .VS-search input,
 .VS-search .VS-input-width-tester {
@@ -98,13 +95,13 @@
 
 .VS-search .search_parameter {
 	float: left;
-	margin: 0.5px 3px;
-	padding: 0 5px 0 16px;
+	margin: 0.5px 2px;
+	padding: 0.5px 4px 0 18px;
 	position: relative;
 	border: 1px solid transparent;
-	height: 20px;
+	height: 18px;
 	cursor: pointer;
-	line-height: 1.6em;
+	line-height: 18px;
 }
 .VS-search .search_parameter.selected {
 	-webkit-border-radius: 16px;
@@ -118,42 +115,43 @@
 }
 .VS-search .search_parameter div{
 	float: left;
-	margin: 0 3px;
+	margin: 0 2px;
 
 }
 .VS-search .search_parameter div:hover{
 	color: #000;
 }
-.VS-search .search_parameter .parameter {
+.VS-search .search_parameter div.key {
 	float: left;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 10px;
 	color: #808080;
 }
-.VS-search .search_parameter.is_selected .parameter {
+.VS-search .search_parameter.is_selected div.key {
 	margin-left: 3px;
+}
+.VS-search .search_parameter div.operator {
+	font-style: italic;
 }
 .VS-search .search_parameter .search_parameter_input_container {
 	float: left;
 }
-.VS-search .search_parameter input {
+
+.VS-search .search_parameter input{
 	margin: 0;
 	padding: 0;
 	color: #000;
-	_font-size: 13px;
-	_line-height: 16px;
-	_height: 16px;
-	width: auto;
-	z-index: 100;
-	position: relative;
-	padding: 0px 3px 2px 4px;
-
+	width: 10px;
 }
+
+
+
+
 .VS-search .search_parameter .search_parameter_remove {
 	position: absolute;
 	left: 2px;
-	top: 4px;
+	top: 3px;
 }
 .VS-search .search_parameter.is_selected .search_parameter_remove {
 	opacity: 0.4;
@@ -164,8 +162,8 @@
 .VS-search .search_parameter .search_parameter_remove:hover {
 	opacity: 1;
 }
-.VS-search .search_parameter.is_editing .parameter,
-.VS-search .search_parameter.is_selected .parameter {
+.VS-search .search_parameter.is_editing .key,
+.VS-search .search_parameter.is_selected .key {
 	color: #000;
 }
 
@@ -224,7 +222,7 @@
 	opacity: 0.97;
 	box-shadow: 3px 4px 5px -2px rgba(0, 0, 0, 0.5); -webkit-box-shadow: 3px 4px 5px -2px rgba(0, 0, 0, 0.5); -moz-box-shadow: 3px 4px 5px -2px rgba(0, 0, 0, 0.5);
 }
-.VS-interface.ui-autocomplete .ui-autocomplete-category {
+.VS-interface.ui-autocomplete li.ui-autocomplete-category {
 	text-transform: capitalize;
 	font-size: 11px;
 	padding: 4px 4px 4px;
@@ -235,6 +233,10 @@
 	font-weight: bold;
 	color: white;
 	cursor: default;
+}
+.VS-interface.ui-autocomplete li a.category-child {
+	padding-left: 14px !important;
+	font-size: 12px !important;
 }
 .VS-interface.ui-autocomplete .ui-menu-item {
 	float: none;
